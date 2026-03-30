@@ -4,7 +4,7 @@ import icon2 from "../assets/package.png";
 import icon3 from "../assets/rocket.png";
 const GetStarted = () => {
   return (
-    <div className="max-w-350 mx-auto">
+    <div className="max-w-350 mx-auto mt-20">
       <div className="text-center space-y-3">
         <h2 className="text-4xl font-bold">Get Started in 3 Steps</h2>
         <p>Start using premium digital tools in minutes, not hours.</p>

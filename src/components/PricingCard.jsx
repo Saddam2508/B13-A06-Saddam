@@ -1,0 +1,60 @@
+import React from "react";
+
+const PricingCard = ({ plan }) => {
+  return (
+    <div
+      className={`rounded-xl shadow-md ${plan.highlight ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] " : ""} p-10  space-y-3 relative flex flex-col`}
+    >
+      <div>
+        <h3
+          className={
+            plan.highlight ? "text-white text-2xl" : "text-2xl font-bold"
+          }
+        >
+          {plan.title}
+        </h3>
+        <p
+          className={plan.highlight ? "text-white mb-3" : "text-gray-600 mb-3"}
+        >
+          {plan.subtitle}
+        </p>
+        <p className={plan.highlight ? "text-white " : ""}>
+          {" "}
+          <span
+            className={
+              plan.highlight
+                ? "text-white text-3xl font-bold"
+                : "text-3xl font-bold"
+            }
+          >
+            ${plan.price}
+          </span>
+          /{plan.duration}
+        </p>
+      </div>
+      <div className="flex-1">
+        {plan.features.map((feature, index) => (
+          <p key={index} className="flex items-center space-x-2">
+            <span className={plan.highlight ? "text-white" : "text-green-500"}>
+              ✓
+            </span>
+            <span className={plan.highlight ? "text-white" : "text-gray-600"}>
+              {feature}
+            </span>
+          </p>
+        ))}
+      </div>
+      <button
+        className={
+          plan.highlight
+            ? "bg-white text-[#4F39F6] px-6 py-2 rounded-full font-bold mt-2"
+            : "bg-[#4F39F6] text-white px-6 py-2 rounded-full font-bold mt-2"
+        }
+      >
+        {plan.buttonText}
+      </button>
+    </div>
+  );
+};
+
+export default PricingCard;

@@ -4,7 +4,7 @@ import playIcon from "../assets/play.png";
 const Banner = () => {
   return (
     <div className="max-w-350 mx-auto py-20 flex gap-10 items-center justify-between">
-      <div class="banner-left space-y-3">
+      <div className="banner-left space-y-3">
         <button className="btn rounded-2xl bg-base-300">
           <span className="flex items-center justify-center w-4 h-4 bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full"></span>
           <span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text">
