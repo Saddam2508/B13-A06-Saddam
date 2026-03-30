@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Pricing from "./components/Pricing";
 import Products from "./components/Products";
 import Workflow from "./components/Workflow";
+import Footer from "./components/Footer";
 
 const pricingDataFun = async () => {
   const response = await fetch("/pricing.json");
@@ -27,6 +28,7 @@ function App() {
         <Pricing pricingPromise={pricingPromise} />
       </Suspense>
       <Workflow />
+      <Footer />
     </>
   );
 }

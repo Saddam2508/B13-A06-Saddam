@@ -31,7 +31,7 @@ const Banner = () => {
           </button>
         </div>
       </div>
-      <div class="banner-right">
+      <div className="banner-right">
         <img src={banner} alt="Banner" className="object-contain" />
       </div>
     </div>
