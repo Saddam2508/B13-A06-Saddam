@@ -53,6 +53,11 @@ const PricingCard = ({ plan }) => {
       >
         {plan.buttonText}
       </button>
+      {plan.badge && (
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-200 text-amber-500 text-xs  px-2 py-1 rounded-full transform ">
+          {plan.badge}
+        </div>
+      )}
     </div>
   );
 };
