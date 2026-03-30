@@ -19,6 +19,9 @@ const Workflow = () => {
           View Pricing
         </button>
       </div>
+      <p className="text-center text-white mt-6">
+        14-day free trial • No credit card required • Cancel anytime
+      </p>
     </div>
   );
 };
