@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const Product = ({ product, cart, setCart }) => {
   const [buttonText, setButtonText] = useState(product.buttonText);
@@ -6,10 +7,12 @@ const Product = ({ product, cart, setCart }) => {
     const existingProduct = cart.find((item) => item.id === product.id);
     if (existingProduct) {
       setButtonText("Already in Cart");
+      toast.warning("Already in Cart")
       return;
     }
     setCart([...cart, product]);
     setButtonText("Added to Cart");
+    toast.success("Added to Cart")
   };
 
   return (

@@ -1,4 +1,6 @@
 import { Suspense, useState } from "react";
+import { ToastContainer } from "react-toastify";
+
 import "./App.css";
 import ActiveUsers from "./components/ActiveUsers";
 import Banner from "./components/Banner";
@@ -9,6 +11,7 @@ import Products from "./components/Products";
 import Workflow from "./components/Workflow";
 import Footer from "./components/Footer";
 import Count from "./components/Count";
+
 
 const pricingDataFun = async () => {
   const response = await fetch("/pricing.json");
@@ -26,6 +29,7 @@ function App() {
   const [cart, setCart] = useState([]);
   return (
     <>
+    <ToastContainer />
       <Navbar cart={cart} />
       <Banner />
       <ActiveUsers />

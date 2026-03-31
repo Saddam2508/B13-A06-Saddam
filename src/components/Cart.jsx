@@ -1,5 +1,6 @@
 import React from "react";
 import { ShoppingCart } from "lucide-react";
+import { toast } from "react-toastify";
 
 const Cart = ({ cart, setCart }) => {
   const total = cart.reduce((acc, item) => acc + item.price, 0);
@@ -7,6 +8,7 @@ const Cart = ({ cart, setCart }) => {
   const handleRemove = (itemId) => {
     const updatedCart = cart.filter((item) => item.id !== itemId);
     setCart(updatedCart);
+    toast.success("Product remove successfully")
   };
 
   const handleCheckout = ()=>{
