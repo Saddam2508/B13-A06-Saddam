@@ -13,6 +13,9 @@ const Cart = ({ cart, setCart }) => {
 
   const handleCheckout = ()=>{
     setCart([])
+    toast.success("Proceed to Checkout")
+    const modal = document.getElementById("my_modal_5");
+    if (modal) modal.showModal();
   }
 
   return (
@@ -51,7 +54,7 @@ const Cart = ({ cart, setCart }) => {
               <p>Total</p>
               <p className="text-xl font-bold">${total.toFixed(2)}</p>
             </div>
-            <button onClick={handleCheckout} className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] w-full rounded-full text-white my-5">Proceed to Checkout</button>
+            <button onClick={ ()=> handleCheckout ()} className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] w-full rounded-full text-white my-5">Proceed to Checkout</button>
           </div>
         ) : (
           <div className="flex flex-col justify-center items-center gap-6">
@@ -60,6 +63,18 @@ const Cart = ({ cart, setCart }) => {
           </div>
         )}
       </div>
+      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+  <div className="modal-box">
+    <h3 className="font-bold text-lg">Proceed to payment</h3>
+    <p className="py-4">Press ESC key or click the button below to close</p>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
     </div>
   );
 };
