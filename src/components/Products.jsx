@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Cart from "./Cart";
 import AllProducts from "./AllProdcuts";
 
-const Products = ({ productsPromise }) => {
+const Products = ({ productsPromise, cart, setCart }) => {
   const [toggle, setToggle] = useState(true);
   return (
     <div className="max-w-350 mx-auto mt-20">
@@ -33,10 +33,18 @@ const Products = ({ productsPromise }) => {
               : "btn rounded-full"
           }
         >
-          Cart
+          Cart ({cart.length})
         </button>
       </div>
-      {toggle ? <AllProducts productsPromise={productsPromise} /> : <Cart />}
+      {toggle ? (
+        <AllProducts
+          productsPromise={productsPromise}
+          cart={cart}
+          setCart={setCart}
+        />
+      ) : (
+        <Cart cart={cart} setCart={setCart} />
+      )}
     </div>
   );
 };

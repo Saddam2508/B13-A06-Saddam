@@ -2,7 +2,7 @@ import { ShoppingCart } from "lucide-react";
 import React from "react";
 import CartIconWithBadge from "../ui/CartIconWithBadge";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   return (
     <div className="navbar bg-base-100 shadow-sm max-w-350 mx-auto">
       <div className="navbar-start">
@@ -71,7 +71,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end flex gap-4">
         <CartIconWithBadge
-          itemCount={50}
+          itemCount={cart.length}
           onClick={() => console.log("hello")}
         />
         <a className="btn ">Login</a>

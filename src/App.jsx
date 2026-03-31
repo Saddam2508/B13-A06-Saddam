@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import ActiveUsers from "./components/ActiveUsers";
 import Banner from "./components/Banner";
@@ -22,13 +22,18 @@ const pricingPromise = pricingDataFun();
 const productsPromise = productsDataFun();
 
 function App() {
+  const [cart, setCart] = useState([]);
   return (
     <>
-      <Navbar />
+      <Navbar cart={cart} />
       <Banner />
       <ActiveUsers />
       <Suspense fallback={<div>Loading...</div>}>
-        <Products productsPromise={productsPromise} />
+        <Products
+          productsPromise={productsPromise}
+          cart={cart}
+          setCart={setCart}
+        />
       </Suspense>
       <GetStarted />
       <Suspense fallback={<div>Loading...</div>}>

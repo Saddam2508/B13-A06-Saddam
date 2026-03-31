@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Product = ({ product }) => {
+const Product = ({ product, cart, setCart }) => {
+  const [buttonText, setButtonText] = useState(product.buttonText);
+  const handleClick = (product) => {
+    const existingProduct = cart.find((item) => item.id === product.id);
+    if (existingProduct) {
+      setButtonText("Already in Cart");
+      return;
+    }
+    setCart([...cart, product]);
+    setButtonText("Added to Cart");
+  };
+
   return (
     <div
       className={
@@ -35,11 +46,12 @@ const Product = ({ product }) => {
         ))}
       </div>
       <button
-        className={
-          "bg-[#4F39F6] text-white px-6 py-2 rounded-full font-bold mt-2"
-        }
+        onClick={() => handleClick(product)}
+        className={`text-white px-6 py-2 rounded-full font-bold mt-2 cursor-pointer ${buttonText === "Added to Cart" || buttonText === "Already in Cart" ? "bg-green-500" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] "}`}
       >
-        {product.buttonText}
+        {buttonText === "Added to Cart" || buttonText === "Already in Cart"
+          ? "✓ " + buttonText
+          : buttonText}
       </button>
       {product.tag && (
         <div
