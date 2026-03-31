@@ -9,7 +9,7 @@ const AllProducts = ({ productsPromise, cart, setCart }) => {
   }, [productsData]);
 
   return (
-    <div className="grid grid-cols-3 gap-6  p-10 mt-10">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6  p-10 mt-10">
       {products.map((product) => (
         <Product
           key={product.id}

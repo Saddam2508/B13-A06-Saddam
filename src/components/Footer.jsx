@@ -2,11 +2,11 @@ import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="bg-black py-20  text-white">
+    <div className="bg-black py-8 md:py-20  text-white px-6">
       <div className="max-w-350 mx-auto">
-        <div className="grid grid-cols-5 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           <div className="space-y-3">
-            <h2 className="text-5xl mb-5">DigiTools</h2>
+            <h2 className=" text-2xl md:text-5xl mb-5">DigiTools</h2>
             <p>
               Premium digital tools for creators, professionals, and businesses.
               Work smarter with our suite of powerful tools.
@@ -90,11 +90,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between text-white mt-10 border-t border-gray-600 pt-5">
+        <div className="flex flex-col-reverse sm:flex-row justify-between text-white mt-10 border-t border-gray-600 pt-5">
           <div>
             <p>©2026 Digitools. All rights reserved.</p>
           </div>
-          <div className="flex justify-between gap-5">
+          <div className=" mb-5 sm:mb-0 flex justify-between gap-5">
             <p>Privacy Policy</p>
             <p> Terms of Service </p>
             <p>Cookies</p>

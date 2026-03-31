@@ -15,7 +15,7 @@ const Cart = ({ cart, setCart }) => {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-5">Your Cart</h2>
+      <h2 className="text-2xl font-bold mb-5 px-6">Your Cart</h2>
       <div className="py-15 rounded-xl bg-white p-6  border-2 border-gray-100">
         {cart.length > 0 ? (
           <div>
@@ -31,7 +31,7 @@ const Cart = ({ cart, setCart }) => {
                     className="w-10 h-10 object-contain"
                   />
                   <div>
-                    <h3>{item.title}</h3>
+                    <h3 className="font-bold">{item.title}</h3>
                     <p>${item.price}</p>
                   </div>
                 </div>

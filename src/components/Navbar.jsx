@@ -4,7 +4,7 @@ import CartIconWithBadge from "../ui/CartIconWithBadge";
 
 const Navbar = ({ cart }) => {
   return (
-    <div className="navbar bg-base-100 shadow-sm max-w-350 mx-auto">
+    <div className="navbar bg-base-100 shadow-sm max-w-350 mx-auto px-6">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -74,8 +74,8 @@ const Navbar = ({ cart }) => {
           itemCount={cart.length}
           onClick={() => console.log("hello")}
         />
-        <a className="btn ">Login</a>
-        <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-2xl text-white border-none">
+        <a className="btn hidden sm:flex">Login</a>
+        <a className="btn hidden sm:flex bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-2xl text-white border-none">
           Get Started
         </a>
       </div>

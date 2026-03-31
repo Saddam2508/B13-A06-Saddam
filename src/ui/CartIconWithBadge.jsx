@@ -7,7 +7,7 @@ export default function CartIconWithBadge({ itemCount, onClick }) {
       onClick={onClick}
       className="relative p-2 hover:bg-gray-100 rounded-full transition-colors"
     >
-      <ShoppingCart size={24} strokeWidth={2} />
+      <ShoppingCart size={24} strokeWidth={2} className="cursor-pointer"/>
 
       {itemCount > 0 && (
         <div
