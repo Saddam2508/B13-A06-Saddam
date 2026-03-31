@@ -9,6 +9,10 @@ const Cart = ({ cart, setCart }) => {
     setCart(updatedCart);
   };
 
+  const handleCheckout = ()=>{
+    setCart([])
+  }
+
   return (
     <div>
       <h2 className="text-2xl font-bold mb-5">Your Cart</h2>
@@ -45,6 +49,7 @@ const Cart = ({ cart, setCart }) => {
               <p>Total</p>
               <p className="text-xl font-bold">${total.toFixed(2)}</p>
             </div>
+            <button onClick={handleCheckout} className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] w-full rounded-full text-white my-5">Proceed to Checkout</button>
           </div>
         ) : (
           <div className="flex flex-col justify-center items-center gap-6">
