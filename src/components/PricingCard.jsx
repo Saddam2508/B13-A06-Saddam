@@ -3,7 +3,7 @@ import React from "react";
 const PricingCard = ({ plan }) => {
   return (
     <div
-      className={`rounded-xl shadow-md ${plan.highlight ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] " : ""} p-10  space-y-3 relative flex flex-col`}
+      className={`rounded-xl shadow-md  ${plan.highlight ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] " : ""} p-10  space-y-3 relative flex flex-col transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl`}
     >
       <div>
         <h3

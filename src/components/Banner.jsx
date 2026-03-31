@@ -33,7 +33,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="banner-right">
-        <img src={banner} alt="Banner" className="object-contain" />
+        <img src={banner} alt="Banner" className="object-contain transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl" />
       </div>
     </div>
   );

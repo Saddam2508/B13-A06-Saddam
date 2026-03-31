@@ -10,7 +10,7 @@ const GetStarted = () => {
         <p>Start using premium digital tools in minutes, not hours.</p>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6  p-10 md:mt-10">
-        <div className="rounded-lg shadow-md bg-white p-10 mt-10 text-center space-y-3 flex flex-col items-center relative">
+        <div className="rounded-lg shadow-md bg-white p-10 mt-10 text-center space-y-3 flex flex-col items-center relative transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <div className="rounded-full p-6 bg-amber-100">
             <img src={icon1} alt="Create Account" />
           </div>
@@ -22,7 +22,7 @@ const GetStarted = () => {
             01
           </div>
         </div>
-        <div className="rounded-lg shadow-md bg-white p-10 mt-10 text-center space-y-3 flex flex-col items-center relative">
+        <div className="rounded-lg shadow-md bg-white p-10 mt-10 text-center space-y-3 flex flex-col items-center relative transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <div className="rounded-full p-6 bg-amber-100">
             <img src={icon2} alt="Choose Products" />
           </div>
@@ -32,7 +32,7 @@ const GetStarted = () => {
             02
           </div>
         </div>
-        <div className="rounded-lg shadow-md bg-white p-10 mt-10 text-center space-y-3 flex flex-col items-center relative">
+        <div className="rounded-lg shadow-md bg-white p-10 mt-10 text-center space-y-3 flex flex-col items-center relative transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <div className="rounded-full p-6 bg-amber-100">
             <img src={icon3} alt="Start Creating" />
           </div>

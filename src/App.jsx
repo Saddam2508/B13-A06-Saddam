@@ -8,6 +8,7 @@ import Pricing from "./components/Pricing";
 import Products from "./components/Products";
 import Workflow from "./components/Workflow";
 import Footer from "./components/Footer";
+import Count from "./components/Count";
 
 const pricingDataFun = async () => {
   const response = await fetch("/pricing.json");
