@@ -3,7 +3,6 @@ import PricingCard from "./PricingCard";
 
 const Pricing = ({ pricingPromise }) => {
   const pricingData = use(pricingPromise);
-  console.log(pricingData);
 
   return (
     <div className="max-w-350 mx-auto mt-20">

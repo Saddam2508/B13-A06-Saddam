@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "AI Writing Pro",
+    "tag": "Best Seller",
+    "image": "https://i.ibb.co/gZBf2mSr/writing-2327400-1.png",
+    "price": 29,
+    "billing": "monthly",
+    "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+    "features": [
+      "Unlimited AI generations",
+      "50+ writing templates",
+      "Grammar checker"
+    ],
+    "buttonText": "Buy Now"
+  },
+  {
+    "id": 2,
+    "title": "Design Templates Pack",
+    "tag": "Popular",
+    "image": "https://i.ibb.co/zTDrG1V4/design-tool.png",
+    "price": 49,
+    "billing": "one-time",
+    "description": "2000+ premium templates for social media, presentations, and marketing materials.",
+    "features": ["2000+ templates", "Monthly updates", "Commercial license"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "id": 3,
+    "title": "Premium Stock Assets",
+    "tag": "New",
+    "image": "https://i.ibb.co/h1h94F6s/Group7.png",
+    "price": 19,
+    "billing": "monthly",
+    "description": "Access millions of royalty-free photos, videos, and graphics for your projects.",
+    "features": ["10M+ assets", "Commercial use", "No attribution"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "id": 4,
+    "title": "Automation Toolkit",
+    "tag": "Popular",
+    "image": "https://i.ibb.co/5gp4VcZH/operation.png",
+    "price": 79,
+    "billing": "monthly",
+    "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
+    "features": ["50+ automations", "API access", "Custom workflows"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "id": 5,
+    "title": "Resume Builder Pro",
+    "tag": "New",
+    "image": "https://i.ibb.co/39pryvpN/portfolio.png",
+    "price": 15,
+    "billing": "one-time",
+    "description": "Create professional resumes and cover letters that land interviews.",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "buttonText": "Buy Now"
+  },
+  {
+    "id": 6,
+    "title": "Social Media Content Kit",
+    "tag": "Best Seller",
+    "image": "https://i.ibb.co/r2v9jCy9/social-media.png",
+    "price": 39,
+    "billing": "monthly",
+    "description": "Complete toolkit for creating engaging social media content across all platforms.",
+    "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"],
+    "buttonText": "Buy Now"
+  }
+]

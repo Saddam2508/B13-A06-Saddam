@@ -13,8 +13,13 @@ const pricingDataFun = async () => {
   const response = await fetch("/pricing.json");
   return response.json();
 };
+const productsDataFun = async () => {
+  const response = await fetch("/products.json");
+  return response.json();
+};
 
 const pricingPromise = pricingDataFun();
+const productsPromise = productsDataFun();
 
 function App() {
   return (
@@ -22,7 +27,9 @@ function App() {
       <Navbar />
       <Banner />
       <ActiveUsers />
-      <Products />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Products productsPromise={productsPromise} />
+      </Suspense>
       <GetStarted />
       <Suspense fallback={<div>Loading...</div>}>
         <Pricing pricingPromise={pricingPromise} />
