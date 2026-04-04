@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Product = ({ product, cart, setCart }) => {
   const [buttonText, setButtonText] = useState(product.buttonText);
@@ -13,7 +14,11 @@ const Product = ({ product, cart, setCart }) => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 120 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 2 }}
       className={
         "rounded-xl shadow-md  p-10  space-y-3 relative flex flex-col border-2 border-gray-100"
       }
@@ -68,7 +73,7 @@ const Product = ({ product, cart, setCart }) => {
           {product.tag}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

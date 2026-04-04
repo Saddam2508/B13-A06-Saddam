@@ -1,5 +1,6 @@
 import React from "react";
 import { ShoppingCart } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Cart = ({ cart, setCart }) => {
   const total = cart.reduce((acc, item) => acc + item.price, 0);
@@ -10,7 +11,12 @@ const Cart = ({ cart, setCart }) => {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.1 }}
+    >
       <h2 className="text-2xl font-bold mb-5">Your Cart</h2>
       <div className="py-15 rounded-xl bg-white p-6  border-2 border-gray-100">
         {cart.length > 0 ? (
@@ -53,7 +59,7 @@ const Cart = ({ cart, setCart }) => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
