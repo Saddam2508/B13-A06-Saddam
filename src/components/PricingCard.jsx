@@ -1,8 +1,11 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const PricingCard = ({ plan }) => {
   return (
-    <div
+    <motion.div initial={{opacity: 0, y: 100}}
+                whileInView={{opacity: 1, y: 0}}
+                viewport={{once: true}}
+                transition={{duration: 2}}
       className={`rounded-xl shadow-md  ${plan.highlight ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] " : ""} p-10  space-y-3 relative flex flex-col transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl`}
     >
       <div>
@@ -58,7 +61,7 @@ const PricingCard = ({ plan }) => {
           {plan.badge}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

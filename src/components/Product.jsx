@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-
+import { motion } from "framer-motion";
 const Product = ({ product, cart, setCart }) => {
   const [buttonText, setButtonText] = useState(product.buttonText);
   const handleClick = (product) => {
@@ -16,7 +16,10 @@ const Product = ({ product, cart, setCart }) => {
   };
 
   return (
-    <div
+    <motion.div  initial={{opacity: 0, y: 100}}
+                whileInView={{opacity: 1, y: 0}}
+                viewport={{once: true}}
+                transition={{duration: 2}}
       className={
         "rounded-xl shadow-md  p-10  space-y-3 relative flex flex-col border-2 border-gray-100 transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl"
       }
@@ -71,7 +74,7 @@ const Product = ({ product, cart, setCart }) => {
           {product.tag}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
