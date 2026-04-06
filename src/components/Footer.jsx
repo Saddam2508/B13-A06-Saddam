@@ -94,7 +94,7 @@ const Footer = () => {
           <div>
             <p>©2026 Digitools. All rights reserved.</p>
           </div>
-          <div className=" mb-5 sm:mb-0 flex justify-between gap-5">
+          <div className=" mb-5 sm:mb-0 flex justify-between gap-5 text-xs md:text-[16px]">
             <p>Privacy Policy</p>
             <p> Terms of Service </p>
             <p>Cookies</p>
