@@ -5,10 +5,13 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <motion.div initial={{opacity: 0, y: 100}}
+    <motion.div initial={{opacity: 0, y: 150}}
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true}}
-                transition={{duration: 2, ease: "anticipate" }} className="bg-black py-8 md:py-20  text-white px-6">
+                 transition={{
+                duration: 0.45,
+                ease: "easeOut",
+            }} className="bg-black py-8 md:py-20  text-white px-6">
       <div className="max-w-350 mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           <div className="space-y-3">

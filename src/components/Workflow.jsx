@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 
 const Workflow = () => {
   return (
-    <motion.div initial={{opacity: 0, y: 100}}
+    <motion.div initial={{opacity: 0, y: 150}}
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true}}
-                transition={{duration: 2, ease: "anticipate" }} className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] sm:mt-8 md:mt-20 py-10 md:py-20 px-5 sm:px-0">
+                 transition={{
+                duration: 0.45,
+                ease: "easeOut",
+            }} className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] sm:mt-8 md:mt-20 py-10 md:py-20 px-5 sm:px-0">
       <div className="  text-white max-w-350 mx-auto text-center space-y-3 ">
         <h2 className="text-3xl md:text-4xl">Ready to Transform Your Workflow?</h2>
         <p>
