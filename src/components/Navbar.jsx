@@ -4,7 +4,7 @@ import CartIconWithBadge from "../ui/CartIconWithBadge";
 
 const Navbar = ({ cart }) => {
   return (
-    <div className="navbar bg-base-100 shadow-sm max-w-[1600] mx-auto px-6 fixed z-50">
+    <div className="navbar bg-base-100 shadow-sm max-w-[2500] mx-auto px-6 fixed z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
