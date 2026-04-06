@@ -2,12 +2,23 @@ import React from "react";
 import { motion } from "framer-motion";
 const PricingCard = ({ plan }) => {
   return (
-    <motion.div initial={{opacity: 0, y: 100}}
+    <motion.div initial={{opacity: 0, y: 150}}
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true}}
+                whileHover={{
+                scale: [null, 1.10, 1.0],
+                transition: {
+                    duration: 0.5,
+                    times: [0, 0.6, 1],
+                    ease: ["easeInOut", "easeOut"],
+                },
                 
-                transition={{duration: 2, ease: "anticipate"}}
-      className={`rounded-xl shadow-md  ${plan.highlight ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] " : ""} p-10  space-y-3 relative flex flex-col transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl`}
+            }}
+                 transition={{
+                duration: 0.45,
+                ease: "easeOut",
+            }}
+      className={`rounded-xl shadow-md  ${plan.highlight ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] " : ""} p-10  space-y-3 relative flex flex-col transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl overflow-hidden`}
     >
       <div>
         <h3
